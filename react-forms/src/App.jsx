@@ -108,7 +108,7 @@ function App() {
       `http://www.omdbapi.com/?apikey=${apiKey}&s=${formData.search}`
     );
     const jsonMovies = await response.json();
-    setMovies(jsonMovies.Search);
+    setMovies(jsonMovies.Search || []);
   };
 
   return (
